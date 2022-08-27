@@ -18,3 +18,71 @@ body{
     justify-items: center;
     flex-direction: column;
 }
+
+#image-container{
+    height: 100%;
+    padding: 0 2rem 5rem 2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tagline{
+    color: #ddd;
+    font-size: 3rem;
+}
+
+.slides{
+    display: none;
+}
+
+#controls{
+    padding: 0.5rem;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    color: #ddd;
+    font-size: 2.5rem;
+    user-select: none;
+}
+
+#carousel{
+    position: relative;
+}
+
+#prev,#next{
+    padding: 0.3rem;
+    transition: all 0.5s;
+}
+
+#prev:hover,#next:hover{
+    cursor: pointer;
+    color: #121212;
+    background-color: #ddd;
+    border-radius: 3px;
+}
+
+#dots{
+    display: flex;
+    width: 100%;
+    position: absolute;
+    top: 95%;
+    justify-content: center;
+}
+
+.dot{
+    margin: 0.3rem;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    border: 1px solid white;
+    transition: all 0.2s;
+}
+
+.active{
+    background-color: #ddd;
+    box-shadow: 0 0 5px #ccc;
+}
