@@ -5,11 +5,11 @@ let slides = document.getElementsByClassName('slides');
 
 console.log(slides);
 
-for(let i= 0; i<slides.length; i++){
-    dots.innerhtml +="<p class= 'dot'></p>"
+for(let i= 0; i<slides.length;i++ ){
+    dots.innerHTML +="<p class= 'dot'></p>"
 }
 
-let dot= document.getElementsByClassName('dot')
+let dot= document.getElementsByClassName('dot');
 
 let slideIndex = 1;
 
@@ -18,3 +18,16 @@ next.addEventListener('click', ()=>changeSlide(1));
 
 changeSlide = num => showSlides (slideIndex +=num);
 
+showSlides = num=>{
+    num=>slides.length ? slideIndex = 1
+        : num<1 ? num = slides.length: slideIndex;
+    for(let i = 0; i< slides.length;i++ ){
+        slides[i].style.display = "none";
+        dot[i].className = dot[i].className.replace("active", "");
+    }
+
+    slides[slideIndex -1].style.display = "block";
+    dot[slideIndex -1].className += "active";
+}
+
+showSlides (slideIndex);
