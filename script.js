@@ -30,4 +30,4 @@ showSlides = num=>{
     dot[slideIndex -1].className += "active";
 }
 
-showSlides (slideIndex);
+showSlides (slideIndex); 
