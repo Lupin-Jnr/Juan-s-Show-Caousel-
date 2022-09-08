@@ -31,3 +31,5 @@ showSlides = num=>{
 }
 
 showSlides (slideIndex); 
+
+setInterval(() => changeSlide(1), 5000);
